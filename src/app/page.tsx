@@ -17,7 +17,7 @@ export default function Page() {
 </div>
 <div className="flex flex-col">
 <div className="flex items-center gap-space-sm flex-wrap">
-<span className="font-headline-sm text-headline-sm text-on-surface tracking-tight">SOVEREIGN DISRUPT PROTOCOL</span>
+<span className="font-headline-sm text-headline-sm text-on-surface tracking-tight">GovMesh Protocol</span>
 <span className="px-space-xs py-0.5 bg-primary/10 text-primary font-label-sm text-label-sm uppercase rounded tracking-wider">Fast-Track Startup Squad Accelerator</span>
 <span className="inline-flex items-center gap-1 px-space-xs py-0.5 bg-secondary/10 text-secondary font-label-sm text-label-sm uppercase rounded">
 <span className="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
@@ -465,3 +465,4 @@ export default function Page() {
     </>
   );
 }
+

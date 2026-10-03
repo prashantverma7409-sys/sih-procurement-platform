@@ -14,6 +14,7 @@ export default function Sidebar() {
     { name: 'Escrow Payments', path: '/escrow', icon: 'currency_rupee', num: '05' },
     { name: 'Synthetic Sandbox', path: '/sandbox', icon: 'science', num: '06' },
     { name: 'Reputation Passport', path: '/reputation-passport', icon: 'verified_user', num: '07' },
+    { name: 'Double-Blind Audit', path: '/officer/audit-vault', icon: 'policy', num: '08' },
   ];
 
   return (
