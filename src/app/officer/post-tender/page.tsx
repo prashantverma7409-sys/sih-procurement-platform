@@ -6,16 +6,20 @@ import Skeleton, { SkeletonText } from '@/components/Skeleton';
 export default function Page() {
 
   const [rawText, setRawText] = React.useState('');
+  const [file, setFile] = React.useState<File | null>(null);
   const [loading, setLoading] = React.useState(false);
   const [result, setResult] = React.useState<any>(null);
 
   const handleSanitize = async () => {
     setLoading(true);
     try {
+      const formData = new FormData();
+      if (file) formData.append("file", file);
+      if (rawText) formData.append("rawText", rawText);
+
       const res = await fetch("/api/sanitize-tender", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ rawText }),
+        body: formData
       });
       const data = await res.json();
       setResult(data);
