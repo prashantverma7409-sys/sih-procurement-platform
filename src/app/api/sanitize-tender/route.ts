@@ -104,6 +104,30 @@ export async function POST(req: Request) {
     });
 
     const result = JSON.parse(completion.choices[0]?.message?.content || "{}");
+    
+    // 3. Persist to Supabase Database (if configured)
+    const { supabase } = await import('@/lib/supabase');
+    if (supabase) {
+      try {
+        console.log("Persisting sanitized tender to Supabase Database...");
+        await supabase.from('sanitized_tenders').insert([
+          {
+            title: result.title || 'Untitled Project',
+            department: result.department || 'Unknown',
+            budget: result.budget || 'N/A',
+            tldr: result.tldr || 'No description provided.',
+            timeline_days: result.timelineDays || 0,
+            raw_text: rawText.substring(0, 5000), // save first 5000 chars for audit
+            created_at: new Date().toISOString()
+          }
+        ]);
+        console.log("Successfully saved to Supabase.");
+      } catch (dbError) {
+        // We log but don't fail the API request if the DB insert fails (graceful degradation)
+        console.error("Supabase Persistence Error:", dbError);
+      }
+    }
+
     return NextResponse.json(result);
     
   } catch (error: any) {

@@ -176,14 +176,24 @@ export default function AuditVault() {
                 Approving this bid generates a downloadable "Safe-Harbor" PDF that records the anonymized selection, the evaluation criteria and a SHA-256 integrity hash, so any later tampering with the report is detectable during CVC/CAG audits.
               </p>
             </div>
-            <button
-              onClick={handleGeneratePdf}
-              disabled={generating}
-              className="mt-2 px-8 py-3 bg-primary text-on-primary font-bold tracking-wider rounded shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:scale-105 transition-transform flex items-center gap-2 disabled:opacity-60 disabled:hover:scale-100"
-            >
-              <span className="material-symbols-outlined">description</span>
-              {generating ? 'GENERATING...' : 'GENERATE SAFE-HARBOR AUDIT PDF'}
-            </button>
+            <div className="flex items-center gap-4 mt-2">
+              <button
+                onClick={handleGeneratePdf}
+                disabled={generating}
+                className="px-6 py-3 bg-primary text-on-primary font-bold tracking-wider rounded shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:scale-105 transition-transform flex items-center gap-2 disabled:opacity-60 disabled:hover:scale-100"
+              >
+                <span className="material-symbols-outlined">description</span>
+                {generating ? 'GENERATING...' : 'GENERATE SAFE-HARBOR AUDIT PDF'}
+              </button>
+
+              <button className="px-6 py-3 bg-emerald-500 text-black font-bold tracking-wider rounded shadow-[0_0_20px_rgba(16,185,129,0.4)] hover:scale-105 transition-transform flex items-center gap-2">
+                <span className="material-symbols-outlined">rocket_launch</span>
+                SCALE: AUTO-PUBLISH TO GeM CATALOG
+              </button>
+            </div>
+            <p className="text-emerald-400 text-[11px] font-mono mt-2">
+              * Fulfills SIH PS-136 Scale Mandate: Successful pilots are instantly accredited on the GeM Innovation Marketplace.
+            </p>
 
           </div>
         )}
