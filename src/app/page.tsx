@@ -1,5 +1,6 @@
 "use client";
 import React from 'react';
+import { mockFeedData } from '../lib/mockFeedData';
 
 export default function Page() {
   return (
@@ -189,503 +190,110 @@ export default function Page() {
 </div>
 
 <div className="grid grid-cols-1 xl:grid-cols-2 gap-space-lg">
-
-<div className="relative bg-surface-container rounded p-space-lg flex flex-col justify-between shadow-md overflow-hidden group hover:bg-surface-container-high transition-all">
-
-<div className="absolute top-0 left-0 w-1.5 h-full bg-primary"></div>
-<div className="absolute top-0 right-0 px-space-sm py-0.5 bg-primary/20 text-primary font-label-sm text-label-sm uppercase font-semibold rounded-bl">
-          PRIORITY MISSION // FAST-TRACK
+  {mockFeedData.map((tender) => (
+    <div key={tender.id} className="relative bg-surface-container rounded p-space-lg flex flex-col justify-between shadow-md overflow-hidden group hover:bg-surface-container-high transition-all">
+      <div className={`absolute top-0 left-0 w-1.5 h-full bg-${tender.themeColor}${tender.themeColor === 'primary' && tender.id === '5' ? '-container' : ''}${tender.themeColor === 'secondary' && tender.id === '6' ? '-container' : ''}`}></div>
+      <div className={`absolute top-0 right-0 px-space-sm py-0.5 bg-${tender.themeColor}/20 text-${tender.themeColor} font-label-sm text-label-sm uppercase font-semibold rounded-bl`}>
+        {tender.priorityMission}
+      </div>
+      <div className="flex flex-col gap-space-sm pl-space-xs">
+        <div className="flex items-center justify-between pr-24 flex-wrap gap-1">
+          <div className="flex items-center gap-1.5">
+            <span className={`w-2 h-2 rounded-full bg-${tender.themeColor}${tender.id === '1' ? ' animate-pulse' : ''}`}></span>
+            <span className={`font-label-sm text-label-sm text-${tender.themeColor} uppercase font-bold tracking-widest`}>{tender.department}</span>
+          </div>
+          <div className="flex items-center gap-1 bg-surface-container-lowest px-2 py-0.5 rounded">
+            <span className="font-label-sm text-label-sm text-on-surface-variant">RFP:</span>
+            <span className="font-data-mono text-data-mono text-on-surface font-semibold">{tender.rfpId}</span>
+            <button className={`text-on-surface-variant hover:text-${tender.themeColor} transition-colors ml-1`} title="Copy GeM ID" type="button">
+              <span className="material-symbols-outlined text-[14px]">content_copy</span>
+            </button>
+          </div>
         </div>
-<div className="flex flex-col gap-space-sm pl-space-xs">
 
-<div className="flex items-center justify-between pr-24 flex-wrap gap-1">
-<div className="flex items-center gap-1.5">
-<span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-<span className="font-label-sm text-label-sm text-primary uppercase font-bold tracking-widest">MoRTH // NHAI Cyber-Grid</span>
-</div>
-<div className="flex items-center gap-1 bg-surface-container-lowest px-2 py-0.5 rounded">
-<span className="font-label-sm text-label-sm text-on-surface-variant">RFP:</span>
-<span className="font-data-mono text-data-mono text-on-surface font-semibold">GEM/2024/B/8941029</span>
-<button className="text-on-surface-variant hover:text-primary transition-colors ml-1" title="Copy GeM ID" type="button">
-<span className="material-symbols-outlined text-[14px]">content_copy</span>
-</button>
-</div>
-</div>
+        <h2 className="font-headline-lg text-headline-lg text-on-surface tracking-tight leading-snug">
+          {tender.title}
+        </h2>
 
-<h2 className="font-headline-lg text-headline-lg text-on-surface tracking-tight leading-snug">
-            Edge-AI Traffic Modulator &amp; Emergency Corridor Preemption
-          </h2>
-
-<div className="bg-surface-container-lowest p-space-sm rounded flex items-start gap-space-sm">
-<span className="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">auto_awesome</span>
-<div className="flex flex-col">
-<span className="font-label-sm text-label-sm text-primary font-semibold uppercase tracking-wider">AI Sanitizer Telemetry Digest</span>
-<p className="font-body-sm text-body-sm text-on-surface-variant">
-                Original 142 pages of redundant compliance distilled into 4 microservice milestones. Statutory liabilities isolated. EMD barrier liquidated.
-              </p>
-</div>
-</div>
-
-<div className="grid grid-cols-3 gap-space-xs pt-1">
-<div className="bg-surface-container-low p-space-xs rounded flex flex-col">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Escrow Quantum</span>
-<span className="font-headline-sm text-headline-sm text-secondary font-bold">₹75.00 L</span>
-<span className="font-label-sm text-label-sm text-on-surface-variant">100% Guaranteed</span>
-</div>
-<div className="bg-surface-container-low p-space-xs rounded flex flex-col">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Sprint Velocity</span>
-<span className="font-headline-sm text-headline-sm text-on-surface font-bold">14 Weeks</span>
-<span className="font-label-sm text-label-sm text-primary">Bi-Weekly Payouts</span>
-</div>
-<div className="bg-surface-container-low p-space-xs rounded flex flex-col justify-between">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Security Dep.</span>
-<span className="inline-flex items-center gap-1 font-label-md text-label-md text-secondary font-semibold">
-<span className="material-symbols-outlined text-[14px]">verified</span>
-                WAIVED
-              </span>
-<span className="font-label-sm text-label-sm text-on-surface-variant">Sec 80-IAC</span>
-</div>
-</div>
-
-<div className="flex items-center gap-1.5 flex-wrap pt-1">
-<span className="px-2 py-0.5 bg-surface-container-lowest text-primary font-label-sm text-label-sm rounded font-medium">Rust / WASM</span>
-<span className="px-2 py-0.5 bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm rounded font-medium">NVIDIA Jetson AGX</span>
-<span className="px-2 py-0.5 bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm rounded font-medium">MQTT / LoRaWAN</span>
-<span className="px-2 py-0.5 bg-surface-container-lowest text-secondary font-label-sm text-label-sm rounded font-medium">Zero-Trust TLS 1.3</span>
-</div>
-
-<div className="p-space-xs bg-surface-container-low rounded flex items-center justify-between">
-<div className="flex items-center gap-2">
-<div className="flex -space-x-1.5">
-<div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-[10px] font-bold text-on-primary">K1</div>
-<div className="w-6 h-6 rounded-full bg-secondary flex items-center justify-center text-[10px] font-bold text-on-secondary">R9</div>
-<div className="w-6 h-6 rounded-full bg-surface-container-highest flex items-center justify-center text-[10px] text-on-surface-variant">?</div>
-</div>
-<span className="font-label-sm text-label-sm text-on-surface">Squad Forming: <span className="text-tertiary font-semibold">2/3 Seats Filled</span></span>
-</div>
-<span className="font-label-sm text-label-sm text-tertiary">Need: Embedded Rust Core Dev</span>
-</div>
-</div>
-
-<div className="flex items-center justify-between gap-space-sm pt-space-md border-t-0 pl-space-xs mt-space-sm">
-<button className="px-space-md py-1.5 bg-surface-container-low hover:bg-surface-container-lowest text-on-surface font-label-sm text-label-sm uppercase font-semibold rounded flex items-center gap-1.5 transition-colors"  type="button">
-<span className="material-symbols-outlined text-[16px] text-primary">visibility</span>
-<span>View AI Blueprint</span>
-</button>
-<button className="px-space-lg py-1.5 bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md uppercase font-bold rounded flex items-center gap-2 shadow-[0_0_15px_rgba(6,182,212,0.3)] transition-all" type="button">
-<span className="material-symbols-outlined text-[16px]">group_add</span>
-<span>Form Squad &amp; Apply</span>
-</button>
-</div>
-</div>
-
-<div className="relative bg-surface-container rounded p-space-lg flex flex-col justify-between shadow-md overflow-hidden group hover:bg-surface-container-high transition-all">
-<div className="absolute top-0 left-0 w-1.5 h-full bg-tertiary"></div>
-<div className="absolute top-0 right-0 px-space-sm py-0.5 bg-tertiary/20 text-tertiary font-label-sm text-label-sm uppercase font-semibold rounded-bl">
-          DEFENCE iDEX // MAKE-II
+        <div className="bg-surface-container-lowest p-space-sm rounded flex items-start gap-space-sm">
+          <span className={`material-symbols-outlined text-${tender.themeColor} text-[18px] shrink-0 mt-0.5`}>{tender.icon}</span>
+          <div className="flex flex-col">
+            <span className={`font-label-sm text-label-sm text-${tender.themeColor} font-semibold uppercase tracking-wider`}>{tender.aiSanitizerTitle}</span>
+            <p className="font-body-sm text-body-sm text-on-surface-variant">
+              {tender.aiSanitizerDesc}
+            </p>
+          </div>
         </div>
-<div className="flex flex-col gap-space-sm pl-space-xs">
 
-<div className="flex items-center justify-between pr-24 flex-wrap gap-1">
-<div className="flex items-center gap-1.5">
-<span className="w-2 h-2 rounded-full bg-tertiary"></span>
-<span className="font-label-sm text-label-sm text-tertiary uppercase font-bold tracking-widest">Ministry of Defence // iDEX</span>
-</div>
-<div className="flex items-center gap-1 bg-surface-container-lowest px-2 py-0.5 rounded">
-<span className="font-label-sm text-label-sm text-on-surface-variant">RFP:</span>
-<span className="font-data-mono text-data-mono text-on-surface font-semibold">GEM/2024/B/9012441</span>
-<button className="text-on-surface-variant hover:text-tertiary transition-colors ml-1" title="Copy GeM ID" type="button">
-<span className="material-symbols-outlined text-[14px]">content_copy</span>
-</button>
-</div>
-</div>
-
-<h2 className="font-headline-lg text-headline-lg text-on-surface tracking-tight leading-snug">
-            Autonomous Swarm EW De-Confliction &amp; Cryptographic Jam-Resistant Mesh
-          </h2>
-
-<div className="bg-surface-container-lowest p-space-sm rounded flex items-start gap-space-sm">
-<span className="material-symbols-outlined text-tertiary text-[18px] shrink-0 mt-0.5">security</span>
-<div className="flex flex-col">
-<span className="font-label-sm text-label-sm text-tertiary font-semibold uppercase tracking-wider">Kavach Defence Exemption</span>
-<p className="font-body-sm text-body-sm text-on-surface-variant">
-                Pre-cleared under Category Make-II. 100% IP ownership retained by participating tech consortium. Military validation node attached.
-              </p>
-</div>
-</div>
-
-<div className="grid grid-cols-3 gap-space-xs pt-1">
-<div className="bg-surface-container-low p-space-xs rounded flex flex-col">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Escrow Quantum</span>
-<span className="font-headline-sm text-headline-sm text-secondary font-bold">₹1.50 Cr</span>
-<span className="font-label-sm text-label-sm text-on-surface-variant">iDEX Tranche 1 Ready</span>
-</div>
-<div className="bg-surface-container-low p-space-xs rounded flex flex-col">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Delivery Cycle</span>
-<span className="font-headline-sm text-headline-sm text-on-surface font-bold">24 Weeks</span>
-<span className="font-label-sm text-label-sm text-primary">Live Field Trials</span>
-</div>
-<div className="bg-surface-container-low p-space-xs rounded flex flex-col justify-between">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Security Dep.</span>
-<span className="inline-flex items-center gap-1 font-label-md text-label-md text-secondary font-semibold">
-<span className="material-symbols-outlined text-[14px]">verified</span>
-                WAIVED
-              </span>
-<span className="font-label-sm text-label-sm text-on-surface-variant">Make-II Sandbox</span>
-</div>
-</div>
-
-<div className="flex items-center gap-1.5 flex-wrap pt-1">
-<span className="px-2 py-0.5 bg-surface-container-lowest text-primary font-label-sm text-label-sm rounded font-medium">Software Defined Radio</span>
-<span className="px-2 py-0.5 bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm rounded font-medium">FPGA Synthesis</span>
-<span className="px-2 py-0.5 bg-surface-container-lowest text-secondary font-label-sm text-label-sm rounded font-medium">Post-Quantum Lattice</span>
-<span className="px-2 py-0.5 bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm rounded font-medium">MIL-STD-810H</span>
-</div>
-
-<div className="p-space-xs bg-surface-container-low rounded flex items-center justify-between">
-<span className="font-label-sm text-label-sm text-on-surface">Eligibility: <span className="text-secondary font-semibold">Solo Bid or Squad Eligible</span></span>
-<span className="font-label-sm text-label-sm text-on-surface-variant">18 Competitor Telemetries Active</span>
-</div>
-</div>
-
-<div className="flex items-center justify-between gap-space-sm pt-space-md border-t-0 pl-space-xs mt-space-sm">
-<button className="px-space-md py-1.5 bg-surface-container-low hover:bg-surface-container-lowest text-on-surface font-label-sm text-label-sm uppercase font-semibold rounded flex items-center gap-1.5 transition-colors"  type="button">
-<span className="material-symbols-outlined text-[16px] text-tertiary">difference</span>
-<span>View Architecture Diff</span>
-</button>
-<button className="px-space-lg py-1.5 bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md uppercase font-bold rounded flex items-center gap-2 shadow-[0_0_15px_rgba(6,182,212,0.3)] transition-all" type="button">
-<span className="material-symbols-outlined text-[16px]">rocket_launch</span>
-<span>Form Squad &amp; Apply</span>
-</button>
-</div>
-</div>
-
-<div className="relative bg-surface-container rounded p-space-lg flex flex-col justify-between shadow-md overflow-hidden group hover:bg-surface-container-high transition-all">
-<div className="absolute top-0 left-0 w-1.5 h-full bg-secondary"></div>
-<div className="absolute top-0 right-0 px-space-sm py-0.5 bg-secondary/15 text-secondary font-label-sm text-label-sm uppercase font-semibold rounded-bl">
-          NHA // HEALTHCARE SANDBOX
+        <div className="grid grid-cols-3 gap-space-xs pt-1">
+          <div className="bg-surface-container-low p-space-xs rounded flex flex-col">
+            <span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Escrow Quantum</span>
+            <span className="font-headline-sm text-headline-sm text-secondary font-bold">{tender.escrowQuantum}</span>
+            <span className="font-label-sm text-label-sm text-on-surface-variant">{tender.escrowSubtext}</span>
+          </div>
+          <div className="bg-surface-container-low p-space-xs rounded flex flex-col">
+            <span className="font-label-sm text-label-sm text-on-surface-variant uppercase">{tender.sprintVelocityLabel}</span>
+            <span className="font-headline-sm text-headline-sm text-on-surface font-bold">{tender.sprintVelocity}</span>
+            <span className="font-label-sm text-label-sm text-primary">{tender.sprintSubtext}</span>
+          </div>
+          <div className="bg-surface-container-low p-space-xs rounded flex flex-col justify-between">
+            <span className="font-label-sm text-label-sm text-on-surface-variant uppercase">{tender.securityDepLabel}</span>
+            <span className="inline-flex items-center gap-1 font-label-md text-label-md text-secondary font-semibold">
+              <span className="material-symbols-outlined text-[14px]">verified</span>
+              {tender.securityDepStatus}
+            </span>
+            <span className="font-label-sm text-label-sm text-on-surface-variant">{tender.securityDepSubtext}</span>
+          </div>
         </div>
-<div className="flex flex-col gap-space-sm pl-space-xs">
 
-<div className="flex items-center justify-between pr-24 flex-wrap gap-1">
-<div className="flex items-center gap-1.5">
-<span className="w-2 h-2 rounded-full bg-secondary"></span>
-<span className="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-widest">National Health Authority // ABDM</span>
-</div>
-<div className="flex items-center gap-1 bg-surface-container-lowest px-2 py-0.5 rounded">
-<span className="font-label-sm text-label-sm text-on-surface-variant">RFP:</span>
-<span className="font-data-mono text-data-mono text-on-surface font-semibold">GEM/2024/B/7710928</span>
-<button className="text-on-surface-variant hover:text-secondary transition-colors ml-1" title="Copy GeM ID" type="button">
-<span className="material-symbols-outlined text-[14px]">content_copy</span>
-</button>
-</div>
-</div>
-
-<h2 className="font-headline-lg text-headline-lg text-on-surface tracking-tight leading-snug">
-            Zero-Knowledge Federated Health Data Synthesizer for EHR Analytics
-          </h2>
-
-<div className="bg-surface-container-lowest p-space-sm rounded flex items-start gap-space-sm">
-<span className="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">enhanced_encryption</span>
-<div className="flex flex-col">
-<span className="font-label-sm text-label-sm text-secondary font-semibold uppercase tracking-wider">Privacy Engine Specification</span>
-<p className="font-body-sm text-body-sm text-on-surface-variant">
-                Synthesize anonymized longitudinal clinical pathways across 500M ABHA accounts without breaching patient provenance.
-              </p>
-</div>
-</div>
-
-<div className="grid grid-cols-3 gap-space-xs pt-1">
-<div className="bg-surface-container-low p-space-xs rounded flex flex-col">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Escrow Quantum</span>
-<span className="font-headline-sm text-headline-sm text-secondary font-bold">₹45.00 L</span>
-<span className="font-label-sm text-label-sm text-on-surface-variant">Multisig Secured</span>
-</div>
-<div className="bg-surface-container-low p-space-xs rounded flex flex-col">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Sprint Duration</span>
-<span className="font-headline-sm text-headline-sm text-on-surface font-bold">12 Weeks</span>
-<span className="font-label-sm text-label-sm text-primary">Monthly Escrow</span>
-</div>
-<div className="bg-surface-container-low p-space-xs rounded flex flex-col justify-between">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Security Dep.</span>
-<span className="inline-flex items-center gap-1 font-label-md text-label-md text-secondary font-semibold">
-<span className="material-symbols-outlined text-[14px]">verified</span>
-                WAIVED
-              </span>
-<span className="font-label-sm text-label-sm text-on-surface-variant">Tier-1 Sandbox</span>
-</div>
-</div>
-
-<div className="flex items-center gap-1.5 flex-wrap pt-1">
-<span className="px-2 py-0.5 bg-surface-container-lowest text-secondary font-label-sm text-label-sm rounded font-medium">ZK-SNARKs</span>
-<span className="px-2 py-0.5 bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm rounded font-medium">FHIR Standards</span>
-<span className="px-2 py-0.5 bg-surface-container-lowest text-primary font-label-sm text-label-sm rounded font-medium">Confidential Computing</span>
-<span className="px-2 py-0.5 bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm rounded font-medium">PyTorch / CUDA</span>
-</div>
-
-<div className="p-space-xs bg-surface-container-low rounded flex items-center justify-between">
-<span className="font-label-sm text-label-sm text-on-surface">Squad Status: <span className="text-tertiary font-semibold">Open Recruiting</span></span>
-<span className="font-label-sm text-label-sm text-tertiary">Seeking: Cryptographer + HIPAA/ABDM Auditor</span>
-</div>
-</div>
-
-<div className="flex items-center justify-between gap-space-sm pt-space-md border-t-0 pl-space-xs mt-space-sm">
-<button className="px-space-md py-1.5 bg-surface-container-low hover:bg-surface-container-lowest text-on-surface font-label-sm text-label-sm uppercase font-semibold rounded flex items-center gap-1.5 transition-colors"  type="button">
-<span className="material-symbols-outlined text-[16px] text-secondary">code_blocks</span>
-<span>View Architecture Diff</span>
-</button>
-<button className="px-space-lg py-1.5 bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md uppercase font-bold rounded flex items-center gap-2 shadow-[0_0_15px_rgba(6,182,212,0.3)] transition-all" type="button">
-<span className="material-symbols-outlined text-[16px]">group_add</span>
-<span>Form Squad &amp; Apply</span>
-</button>
-</div>
-</div>
-
-<div className="relative bg-surface-container rounded p-space-lg flex flex-col justify-between shadow-md overflow-hidden group hover:bg-surface-container-high transition-all">
-<div className="absolute top-0 left-0 w-1.5 h-full bg-primary"></div>
-<div className="absolute top-0 right-0 px-space-sm py-0.5 bg-primary/20 text-primary font-label-sm text-label-sm uppercase font-semibold rounded-bl">
-          MEITY // BHASHINI MISSION
+        <div className="flex items-center gap-1.5 flex-wrap pt-1">
+          {tender.tags.map((tag, i) => (
+            <span key={i} className={`px-2 py-0.5 bg-surface-container-lowest text-${tag.color} font-label-sm text-label-sm rounded font-medium`}>{tag.text}</span>
+          ))}
         </div>
-<div className="flex flex-col gap-space-sm pl-space-xs">
 
-<div className="flex items-center justify-between pr-24 flex-wrap gap-1">
-<div className="flex items-center gap-1.5">
-<span className="w-2 h-2 rounded-full bg-primary"></span>
-<span className="font-label-sm text-label-sm text-primary uppercase font-bold tracking-widest">MeitY // National Language Engine</span>
-</div>
-<div className="flex items-center gap-1 bg-surface-container-lowest px-2 py-0.5 rounded">
-<span className="font-label-sm text-label-sm text-on-surface-variant">RFP:</span>
-<span className="font-data-mono text-data-mono text-on-surface font-semibold">GEM/2024/B/6638102</span>
-<button className="text-on-surface-variant hover:text-primary transition-colors ml-1" title="Copy GeM ID" type="button">
-<span className="material-symbols-outlined text-[14px]">content_copy</span>
-</button>
-</div>
-</div>
-
-<h2 className="font-headline-lg text-headline-lg text-on-surface tracking-tight leading-snug">
-            Indic LLM Quantization &amp; Low-Latency Voice Inference for Gram Panchayats
-          </h2>
-
-<div className="bg-surface-container-lowest p-space-sm rounded flex items-start gap-space-sm">
-<span className="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">translate</span>
-<div className="flex flex-col">
-<span className="font-label-sm text-label-sm text-primary font-semibold uppercase tracking-wider">Inference Target Architecture</span>
-<p className="font-body-sm text-body-sm text-on-surface-variant">
-                Sub-200ms roundtrip ASR+LLM+TTS deployment on commodity edge CPU units across 250,000 decentralized Panchayat terminals.
-              </p>
-</div>
-</div>
-
-<div className="grid grid-cols-3 gap-space-xs pt-1">
-<div className="bg-surface-container-low p-space-xs rounded flex flex-col">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Escrow Quantum</span>
-<span className="font-headline-sm text-headline-sm text-secondary font-bold">₹90.00 L</span>
-<span className="font-label-sm text-label-sm text-on-surface-variant">GeM Escrow Locked</span>
-</div>
-<div className="bg-surface-container-low p-space-xs rounded flex flex-col">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Contract Span</span>
-<span className="font-headline-sm text-headline-sm text-on-surface font-bold">16 Weeks</span>
-<span className="font-label-sm text-label-sm text-primary">Milestone Releases</span>
-</div>
-<div className="bg-surface-container-low p-space-xs rounded flex flex-col justify-between">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Security Dep.</span>
-<span className="inline-flex items-center gap-1 font-label-md text-label-md text-secondary font-semibold">
-<span className="material-symbols-outlined text-[14px]">verified</span>
-                WAIVED
-              </span>
-<span className="font-label-sm text-label-sm text-on-surface-variant">Startup India Tier</span>
-</div>
-</div>
-
-<div className="flex items-center gap-1.5 flex-wrap pt-1">
-<span className="px-2 py-0.5 bg-surface-container-lowest text-primary font-label-sm text-label-sm rounded font-medium">vLLM Inference</span>
-<span className="px-2 py-0.5 bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm rounded font-medium">GGML / GGUF</span>
-<span className="px-2 py-0.5 bg-surface-container-lowest text-secondary font-label-sm text-label-sm rounded font-medium">22 Scheduled Languages</span>
-<span className="px-2 py-0.5 bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm rounded font-medium">Triton Engine</span>
-</div>
-
-<div className="p-space-xs bg-surface-container-low rounded flex items-center justify-between">
-<span className="font-label-sm text-label-sm text-on-surface">Formation: <span className="text-secondary font-semibold">'IndicVoice Consortium' (3 Startups)</span></span>
-<span className="font-data-mono text-data-mono text-secondary">Consensus: 85%</span>
-</div>
-</div>
-
-<div className="flex items-center justify-between gap-space-sm pt-space-md border-t-0 pl-space-xs mt-space-sm">
-<button className="px-space-md py-1.5 bg-surface-container-low hover:bg-surface-container-lowest text-on-surface font-label-sm text-label-sm uppercase font-semibold rounded flex items-center gap-1.5 transition-colors"  type="button">
-<span className="material-symbols-outlined text-[16px] text-primary">data_object</span>
-<span>View Architecture Diff</span>
-</button>
-<button className="px-space-lg py-1.5 bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md uppercase font-bold rounded flex items-center gap-2 shadow-[0_0_15px_rgba(6,182,212,0.3)] transition-all" type="button">
-<span className="material-symbols-outlined text-[16px]">group_add</span>
-<span>Form Squad &amp; Apply</span>
-</button>
-</div>
-</div>
-
-<div className="relative bg-surface-container rounded p-space-lg flex flex-col justify-between shadow-md overflow-hidden group hover:bg-surface-container-high transition-all">
-<div className="absolute top-0 left-0 w-1.5 h-full bg-primary-container"></div>
-<div className="absolute top-0 right-0 px-space-sm py-0.5 bg-primary/20 text-primary font-label-sm text-label-sm uppercase font-semibold rounded-bl">
-          JAL SHAKTI // NWIC
+        <div className="p-space-xs bg-surface-container-low rounded flex items-center justify-between">
+          {tender.squadStatus.type === 'forming' ? (
+            <>
+              <div className="flex items-center gap-2">
+                <div className="flex -space-x-1.5">
+                  <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-[10px] font-bold text-on-primary">{tender.squadStatus.seats?.k1}</div>
+                  <div className="w-6 h-6 rounded-full bg-secondary flex items-center justify-center text-[10px] font-bold text-on-secondary">{tender.squadStatus.seats?.r9}</div>
+                  <div className="w-6 h-6 rounded-full bg-surface-container-highest flex items-center justify-center text-[10px] text-on-surface-variant">{tender.squadStatus.seats?.unknown}</div>
+                </div>
+                <span className="font-label-sm text-label-sm text-on-surface">{tender.squadStatus.text}<span className="text-tertiary font-semibold">{tender.squadStatus.highlight}</span></span>
+              </div>
+              <span className="font-label-sm text-label-sm text-tertiary">{tender.squadStatus.extra}</span>
+            </>
+          ) : tender.squadStatus.type === 'recruiting' ? (
+            <>
+              <span className="font-label-sm text-label-sm text-on-surface">{tender.squadStatus.text}<span className={`${tender.id === '4' ? 'text-secondary' : 'text-secondary'} font-semibold`}>{tender.squadStatus.highlight}</span></span>
+              <span className={tender.id === '4' ? "font-data-mono text-data-mono text-secondary" : tender.id === '2' ? "font-label-sm text-label-sm text-on-surface-variant" : "font-label-sm text-label-sm text-tertiary"}>{tender.squadStatus.extra}</span>
+            </>
+          ) : (
+            <>
+              <div className="flex items-center gap-1.5">
+                <span className="material-symbols-outlined text-secondary text-[16px]">{tender.squadStatus.icon}</span>
+                <span className="font-label-sm text-label-sm text-on-surface">{tender.squadStatus.text}<span className="text-secondary font-semibold">{tender.squadStatus.highlight}</span></span>
+              </div>
+              <span className="font-label-sm text-label-sm text-primary font-bold">{tender.squadStatus.extra}</span>
+            </>
+          )}
         </div>
-<div className="flex flex-col gap-space-sm pl-space-xs">
+      </div>
 
-<div className="flex items-center justify-between pr-24 flex-wrap gap-1">
-<div className="flex items-center gap-1.5">
-<span className="w-2 h-2 rounded-full bg-primary"></span>
-<span className="font-label-sm text-label-sm text-primary uppercase font-bold tracking-widest">Ministry of Jal Shakti // NWIC</span>
-</div>
-<div className="flex items-center gap-1 bg-surface-container-lowest px-2 py-0.5 rounded">
-<span className="font-label-sm text-label-sm text-on-surface-variant">RFP:</span>
-<span className="font-data-mono text-data-mono text-on-surface font-semibold">GEM/2024/B/5519403</span>
-<button className="text-on-surface-variant hover:text-primary transition-colors ml-1" title="Copy GeM ID" type="button">
-<span className="material-symbols-outlined text-[14px]">content_copy</span>
-</button>
-</div>
-</div>
-
-<h2 className="font-headline-lg text-headline-lg text-on-surface tracking-tight leading-snug">
-            Satellite Synthetic Aperture Radar (SAR) Aquifer Depletion Predictor
-          </h2>
-
-<div className="bg-surface-container-lowest p-space-sm rounded flex items-start gap-space-sm">
-<span className="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">water_drop</span>
-<div className="flex flex-col">
-<span className="font-label-sm text-label-sm text-primary font-semibold uppercase tracking-wider">Groundwater Telemetry Vector</span>
-<p className="font-body-sm text-body-sm text-on-surface-variant">
-                Process interferometric Sentinel-1 phase differentials into automated block-level agricultural recharge warnings with 5m spatial accuracy.
-              </p>
-</div>
-</div>
-
-<div className="grid grid-cols-3 gap-space-xs pt-1">
-<div className="bg-surface-container-low p-space-xs rounded flex flex-col">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Escrow Quantum</span>
-<span className="font-headline-sm text-headline-sm text-secondary font-bold">₹60.00 L</span>
-<span className="font-label-sm text-label-sm text-on-surface-variant">Milestone Backed</span>
-</div>
-<div className="bg-surface-container-low p-space-xs rounded flex flex-col">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Time to Target</span>
-<span className="font-headline-sm text-headline-sm text-on-surface font-bold">18 Weeks</span>
-<span className="font-label-sm text-label-sm text-primary">Bi-weekly Sync</span>
-</div>
-<div className="bg-surface-container-low p-space-xs rounded flex flex-col justify-between">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Security Dep.</span>
-<span className="inline-flex items-center gap-1 font-label-md text-label-md text-secondary font-semibold">
-<span className="material-symbols-outlined text-[14px]">verified</span>
-                WAIVED
-              </span>
-<span className="font-label-sm text-label-sm text-on-surface-variant">Fast-Track 100%</span>
-</div>
-</div>
-
-<div className="flex items-center gap-1.5 flex-wrap pt-1">
-<span className="px-2 py-0.5 bg-surface-container-lowest text-primary font-label-sm text-label-sm rounded font-medium">Sentinel-1 SAR API</span>
-<span className="px-2 py-0.5 bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm rounded font-medium">GeoPandas</span>
-<span className="px-2 py-0.5 bg-surface-container-lowest text-secondary font-label-sm text-label-sm rounded font-medium">Temporal Graph Nets</span>
-<span className="px-2 py-0.5 bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm rounded font-medium">Docker / K8s</span>
-</div>
-
-<div className="p-space-xs bg-surface-container-low rounded flex items-center justify-between">
-<span className="font-label-sm text-label-sm text-on-surface">Squad Status: <span className="text-tertiary font-semibold">1/2 Seats</span></span>
-<span className="font-label-sm text-label-sm text-tertiary">Seeking: Satellite Remote Sensing Specialist</span>
-</div>
-</div>
-
-<div className="flex items-center justify-between gap-space-sm pt-space-md border-t-0 pl-space-xs mt-space-sm">
-<button className="px-space-md py-1.5 bg-surface-container-low hover:bg-surface-container-lowest text-on-surface font-label-sm text-label-sm uppercase font-semibold rounded flex items-center gap-1.5 transition-colors"  type="button">
-<span className="material-symbols-outlined text-[16px] text-primary">satellite</span>
-<span>View Architecture Diff</span>
-</button>
-<button className="px-space-lg py-1.5 bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md uppercase font-bold rounded flex items-center gap-2 shadow-[0_0_15px_rgba(6,182,212,0.3)] transition-all" type="button">
-<span className="material-symbols-outlined text-[16px]">group_add</span>
-<span>Form Squad &amp; Apply</span>
-</button>
-</div>
-</div>
-
-<div className="relative bg-surface-container rounded p-space-lg flex flex-col justify-between shadow-md overflow-hidden group hover:bg-surface-container-high transition-all">
-<div className="absolute top-0 left-0 w-1.5 h-full bg-secondary-container"></div>
-<div className="absolute top-0 right-0 px-space-sm py-0.5 bg-secondary/15 text-secondary font-label-sm text-label-sm uppercase font-semibold rounded-bl">
-          ISRO // IN-SPACe MISSION
-        </div>
-<div className="flex flex-col gap-space-sm pl-space-xs">
-
-<div className="flex items-center justify-between pr-24 flex-wrap gap-1">
-<div className="flex items-center gap-1.5">
-<span className="w-2 h-2 rounded-full bg-secondary"></span>
-<span className="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-widest">ISRO // IN-SPACe Gateway</span>
-</div>
-<div className="flex items-center gap-1 bg-surface-container-lowest px-2 py-0.5 rounded">
-<span className="font-label-sm text-label-sm text-on-surface-variant">RFP:</span>
-<span className="font-data-mono text-data-mono text-on-surface font-semibold">GEM/2024/B/4491208</span>
-<button className="text-on-surface-variant hover:text-secondary transition-colors ml-1" title="Copy GeM ID" type="button">
-<span className="material-symbols-outlined text-[14px]">content_copy</span>
-</button>
-</div>
-</div>
-
-<h2 className="font-headline-lg text-headline-lg text-on-surface tracking-tight leading-snug">
-            Cryogenic Propellant Telemetry Micro-Sensors with Rad-Hardened Telemetry
-          </h2>
-
-<div className="bg-surface-container-lowest p-space-sm rounded flex items-start gap-space-sm">
-<span className="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">rocket</span>
-<div className="flex flex-col">
-<span className="font-label-sm text-label-sm text-secondary font-semibold uppercase tracking-wider">Deep Space Spec Matrix</span>
-<p className="font-body-sm text-body-sm text-on-surface-variant">
-                Extreme low-temperature pressure transduction (-253°C) with single-event-upset mitigation and zero-leakage MEMS packaging.
-              </p>
-</div>
-</div>
-
-<div className="grid grid-cols-3 gap-space-xs pt-1">
-<div className="bg-surface-container-low p-space-xs rounded flex flex-col">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Escrow Quantum</span>
-<span className="font-headline-sm text-headline-sm text-secondary font-bold">₹2.20 Cr</span>
-<span className="font-label-sm text-label-sm text-on-surface-variant">Sovereign Grant</span>
-</div>
-<div className="bg-surface-container-low p-space-xs rounded flex flex-col">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Execution Frame</span>
-<span className="font-headline-sm text-headline-sm text-on-surface font-bold">32 Weeks</span>
-<span className="font-label-sm text-label-sm text-primary">Lab Validation</span>
-</div>
-<div className="bg-surface-container-low p-space-xs rounded flex flex-col justify-between">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Security Dep.</span>
-<span className="inline-flex items-center gap-1 font-label-md text-label-md text-secondary font-semibold">
-<span className="material-symbols-outlined text-[14px]">verified</span>
-                WAIVED
-              </span>
-<span className="font-label-sm text-label-sm text-on-surface-variant">Spacetech Special</span>
-</div>
-</div>
-
-<div className="flex items-center gap-1.5 flex-wrap pt-1">
-<span className="px-2 py-0.5 bg-surface-container-lowest text-primary font-label-sm text-label-sm rounded font-medium">Silicon-on-Insulator</span>
-<span className="px-2 py-0.5 bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm rounded font-medium">CAN-Bus Aero</span>
-<span className="px-2 py-0.5 bg-surface-container-lowest text-secondary font-label-sm text-label-sm rounded font-medium">Telemetry Decoders</span>
-<span className="px-2 py-0.5 bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm rounded font-medium">Custom ASIC</span>
-</div>
-
-<div className="p-space-xs bg-surface-container-low rounded flex items-center justify-between">
-<div className="flex items-center gap-1.5">
-<span className="material-symbols-outlined text-secondary text-[16px]">lock</span>
-<span className="font-label-sm text-label-sm text-on-surface">Vetting: <span className="text-secondary font-semibold">Pre-Cleared (Aarav Sharma Pre-Approved)</span></span>
-</div>
-<span className="font-label-sm text-label-sm text-primary font-bold">TIER-1 CLEARANCE</span>
-</div>
-</div>
-
-<div className="flex items-center justify-between gap-space-sm pt-space-md border-t-0 pl-space-xs mt-space-sm">
-<button className="px-space-md py-1.5 bg-surface-container-low hover:bg-surface-container-lowest text-on-surface font-label-sm text-label-sm uppercase font-semibold rounded flex items-center gap-1.5 transition-colors"  type="button">
-<span className="material-symbols-outlined text-[16px] text-secondary">memory</span>
-<span>View Architecture Diff</span>
-</button>
-<button className="px-space-lg py-1.5 bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md uppercase font-bold rounded flex items-center gap-2 shadow-[0_0_15px_rgba(6,182,212,0.3)] transition-all" type="button">
-<span className="material-symbols-outlined text-[16px]">rocket_launch</span>
-<span>Form Squad &amp; Apply</span>
-</button>
-</div>
-</div>
+      <div className="flex items-center justify-between gap-space-sm pt-space-md border-t-0 pl-space-xs mt-space-sm">
+        <button className="px-space-md py-1.5 bg-surface-container-low hover:bg-surface-container-lowest text-on-surface font-label-sm text-label-sm uppercase font-semibold rounded flex items-center gap-1.5 transition-colors" type="button">
+          <span className={`material-symbols-outlined text-[16px] text-${tender.themeColor}`}>{tender.viewDiffIcon}</span>
+          <span>{tender.viewDiffText}</span>
+        </button>
+        <button className="px-space-lg py-1.5 bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md uppercase font-bold rounded flex items-center gap-2 shadow-[0_0_15px_rgba(6,182,212,0.3)] transition-all" type="button">
+          <span className="material-symbols-outlined text-[16px]">{tender.applyIcon}</span>
+          <span>Form Squad &amp; Apply</span>
+        </button>
+      </div>
+    </div>
+  ))}
 </div>
 
 <div className="bg-surface-container rounded p-space-md flex flex-col gap-space-sm shadow-md">
