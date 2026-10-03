@@ -4,7 +4,7 @@ import Sidebar from '@/components/Sidebar';
 
 
 export const metadata: Metadata = {
-  title: "GovLaunch // SIH PS 136",
+  title: "GovMesh // SIH PS 136",
   description: "Startup-friendly public procurement mechanism",
 };
 

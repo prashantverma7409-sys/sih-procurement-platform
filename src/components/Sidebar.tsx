@@ -22,9 +22,9 @@ export default function Sidebar() {
       <div className="flex flex-col">
         <div className="p-space-lg flex flex-col gap-space-xs bg-surface-container">
           <div className="flex items-center gap-space-sm">
-            <Image alt="GovLaunch v2.4 Emblem" className="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Vb_rkpHeDlxKXn4l0nBIUE4ps4PuvWNYzOdLI0zZsuzcBr11LYodVoKkYIYFXSW10_4d31xv84UbquQ35lAIIGnOop_77MSCttmomi0zbRwlbgAorH70SYjcqK9wPcdwjvKDjEya6zzQzOa_x5VFppNuFPg4J-Q7k2DJ1jnKbTzRTZ8k8LN2udUDzPSpMFD7Z1VuhkKBA0oW5tpkaSZOEIKBIEZhQNI8ptLzyy6ioqj1bZgL65YeoY-w" width={32} height={32} />
+            <Image alt="GovMesh v2.4 Emblem" className="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Vb_rkpHeDlxKXn4l0nBIUE4ps4PuvWNYzOdLI0zZsuzcBr11LYodVoKkYIYFXSW10_4d31xv84UbquQ35lAIIGnOop_77MSCttmomi0zbRwlbgAorH70SYjcqK9wPcdwjvKDjEya6zzQzOa_x5VFppNuFPg4J-Q7k2DJ1jnKbTzRTZ8k8LN2udUDzPSpMFD7Z1VuhkKBA0oW5tpkaSZOEIKBIEZhQNI8ptLzyy6ioqj1bZgL65YeoY-w" width={32} height={32} />
             <div className="flex flex-col">
-              <span className="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">GovLaunch v2.4</span>
+              <span className="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">GovMesh v2.4</span>
               <span className="font-label-sm text-label-sm text-primary tracking-widest uppercase mt-0.5">Sovereign Terminal</span>
             </div>
           </div>

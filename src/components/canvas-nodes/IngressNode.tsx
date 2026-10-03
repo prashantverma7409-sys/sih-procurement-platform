@@ -24,7 +24,7 @@ export default function IngressNode({ data }: any) {
           <div className="flex items-start gap-space-xs">
             <span className="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">router</span>
             <div>
-              <h4 className="font-headline-sm text-[14px] text-on-surface font-semibold leading-tight">GovLaunch Ingress API</h4>
+              <h4 className="font-headline-sm text-[14px] text-on-surface font-semibold leading-tight">GovMesh Ingress API</h4>
               <p className="font-label-sm text-[10px] text-on-surface-variant font-medium mt-0.5">Kong EE / Zero-Trust TLS 1.3</p>
             </div>
           </div>
