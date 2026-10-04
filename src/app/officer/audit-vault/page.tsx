@@ -191,9 +191,7 @@ export default function AuditVault() {
                 SCALE: AUTO-PUBLISH TO GeM CATALOG
               </button>
             </div>
-            <p className="text-emerald-400 text-[11px] font-mono mt-2">
-              * Fulfills SIH PS-136 Scale Mandate: Successful pilots are instantly accredited on the GeM Innovation Marketplace.
-            </p>
+
 
           </div>
         )}
@@ -202,5 +200,6 @@ export default function AuditVault() {
     </div>
   );
 }
+
 
 
