@@ -17,7 +17,7 @@ export default function Page() {
 </div>
 <div className="flex flex-col">
 <div className="flex items-center gap-space-sm flex-wrap">
-<span className="font-headline-sm text-headline-sm text-on-surface tracking-tight">GovMesh Protocol</span>
+<span className="font-headline-sm text-headline-sm text-on-surface tracking-tight">GovTech Open Procurement Portal</span>
 <span className="px-space-xs py-0.5 bg-primary/10 text-primary font-label-sm text-label-sm uppercase rounded tracking-wider">Fast-Track Startup Squad Accelerator</span>
 <span className="inline-flex items-center gap-1 px-space-xs py-0.5 bg-secondary/10 text-secondary font-label-sm text-label-sm uppercase rounded">
 <span className="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
@@ -32,7 +32,7 @@ export default function Page() {
 <div className="flex items-center gap-space-md shrink-0 bg-surface-container-lowest px-space-md py-space-xs rounded">
 <div className="flex flex-col text-right">
 <span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">GeM Live Ledger Relay</span>
-<span className="font-data-mono text-data-mono text-primary font-semibold">SYNC: 14:02:19 IST | BLOCK #19,482,109</span>
+<span className="font-data-mono text-data-mono text-primary font-semibold">SYNC: 14:02:19 IST | TREASURY SYNC OK</span>
 </div>
 <span className="material-symbols-outlined text-secondary text-[20px] animate-spin" style={{ animationDuration: '6s' }}>sync</span>
 </div>
@@ -63,12 +63,12 @@ export default function Page() {
 
 <div className="relative bg-surface-container rounded p-space-md flex flex-col justify-between shadow-sm overflow-hidden group hover:bg-surface-container-high transition-all">
 <div className="flex items-center justify-between">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Active Bids &amp; Squads</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Bidding Consortiums</span>
 <span className="px-1.5 py-0.5 bg-primary/10 text-primary font-label-sm text-label-sm rounded font-medium">34 In Consensus</span>
 </div>
 <div className="mt-space-sm flex items-baseline gap-space-xs">
 <span className="font-headline-xl text-headline-xl text-on-surface tracking-tight font-bold">184</span>
-<span className="font-headline-sm text-headline-sm text-on-surface-variant font-medium">Formations</span>
+<span className="font-headline-sm text-headline-sm text-on-surface-variant font-medium">Joint Venture Proposals</span>
 </div>
 <div className="mt-space-xs flex items-center justify-between pt-1">
 <span className="font-label-sm text-label-sm text-on-surface-variant">Avg Squad Density</span>
@@ -78,7 +78,7 @@ export default function Page() {
 
 <div className="relative bg-surface-container rounded p-space-md flex flex-col justify-between shadow-sm overflow-hidden group hover:bg-surface-container-high transition-all">
 <div className="flex items-center justify-between">
-<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Sovereign Trust Score</span>
+<span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">DPIIT Verified Rating</span>
 <span className="px-1.5 py-0.5 bg-secondary/15 text-secondary font-label-sm text-label-sm rounded font-bold shadow-[0_0_8px_rgba(78,222,163,0.3)]">AAA+ RATED</span>
 </div>
 <div className="mt-space-sm flex items-center justify-between">
@@ -178,7 +178,7 @@ export default function Page() {
 <span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Sort Telemetry:</span>
 <div className="relative">
 <select className="bg-surface-container text-on-surface font-label-sm text-label-sm rounded px-space-md py-1 pr-7 appearance-none focus:outline-none focus:bg-surface-container-high transition-colors cursor-pointer">
-<option>Escrow Quantum (High → Low)</option>
+<option>Sanctioned Budget (High → Low)</option>
 <option>Submission Deadline (Urgent)</option>
 <option>Lowest Jargon Index (AI Verified)</option>
 <option>Fastest Award Velocity</option>
@@ -227,7 +227,7 @@ export default function Page() {
 
         <div className="grid grid-cols-3 gap-space-xs pt-1">
           <div className="bg-surface-container-low p-space-xs rounded flex flex-col">
-            <span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Escrow Quantum</span>
+            <span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Sanctioned Budget</span>
             <span className="font-headline-sm text-headline-sm text-secondary font-bold">{tender.escrowQuantum}</span>
             <span className="font-label-sm text-label-sm text-on-surface-variant">{tender.escrowSubtext}</span>
           </div>
@@ -361,7 +361,7 @@ export default function Page() {
 <span className="material-symbols-outlined text-primary text-[20px]">psychology</span>
 <div className="flex flex-col">
 <span className="font-headline-sm text-headline-sm text-on-surface leading-tight">AI RFP Sanitizer Diff Inspector</span>
-<span className="font-label-sm text-label-sm text-primary uppercase font-bold tracking-widest">Kavach Neural Digest // v4.2</span>
+<span className="font-label-sm text-label-sm text-primary uppercase font-bold tracking-widest">Kavach Neural Digest v4.2</span>
 </div>
 </div>
 <button className="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors"  type="button">
@@ -465,4 +465,5 @@ export default function Page() {
     </>
   );
 }
+
 

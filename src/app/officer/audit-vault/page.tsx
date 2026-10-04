@@ -21,7 +21,7 @@ export default function AuditVault() {
         `Tender: MoRTH-NHAI-8941029 - Edge-AI Traffic Modulator`,
         ``,
         `SELECTED BIDDER (ANONYMIZED): ${bid.name}`,
-        `GovMesh Trust Score: ${bid.score}/100`,
+        `DPIIT Verified Rating: ${bid.score}/100`,
         `Quoted Cost: ${bid.cost.replace('\u20b9', 'INR ')}`,
         `Timeline: ${bid.time}`,
         `Tech Stack: ${bid.tech.join(', ')}`,
@@ -40,7 +40,7 @@ export default function AuditVault() {
 
       const doc = new jsPDF();
       doc.setFontSize(18);
-      doc.text('GovMesh - Safe-Harbor Evaluation Report', 14, 20);
+      doc.text('GovTech - Safe-Harbor Evaluation Report', 14, 20);
       doc.setFontSize(10);
       doc.text('Double-blind bid evaluation record (prototype / demo data)', 14, 27);
       doc.line(14, 30, 196, 30);
@@ -103,7 +103,7 @@ export default function AuditVault() {
         <div className="flex items-center gap-space-md flex-wrap">
           <div className="flex items-center gap-1.5 px-space-xs py-0.5 bg-error/10 rounded border border-error/30">
             <span className="w-2 h-2 rounded-full bg-error animate-pulse"></span>
-            <span className="font-label-sm text-label-sm text-error uppercase font-bold tracking-wider">RESTRICTED CVC AUDIT VAULT // DOUBLE-BLIND ACTIVE</span>
+            <span className="font-label-sm text-label-sm text-error uppercase font-bold tracking-wider">RESTRICTED CVC AUDIT VAULT - DOUBLE-BLIND ACTIVE</span>
           </div>
         </div>
         <div className="flex items-center gap-2">
@@ -120,7 +120,7 @@ export default function AuditVault() {
         <div className="flex flex-col gap-2">
           <h1 className="font-headline-md text-[24px] text-on-surface font-bold">Double-Blind Bid Evaluation</h1>
           <p className="text-on-surface-variant font-body-sm max-w-2xl">
-            To prevent corruption, nepotism, and bias, all startup names, logos, and founder identities have been cryptographically hidden. You must select the winning bid based purely on technical merit, cost, and GovMesh trust scores.
+            To prevent corruption, nepotism, and bias, all startup names, logos, and founder identities have been cryptographically hidden. You must select the winning bid based purely on technical merit, cost, and DPIIT Verified Ratings.
           </p>
         </div>
 
@@ -151,7 +151,7 @@ export default function AuditVault() {
               
               <div className="flex items-center gap-6">
                 <div className="flex flex-col text-right">
-                  <span className="text-[10px] font-label-sm text-on-surface-variant uppercase">GovMesh Trust Score</span>
+                  <span className="text-[10px] font-label-sm text-on-surface-variant uppercase">DPIIT Verified Rating</span>
                   <span className={`font-data-mono text-[18px] font-bold ${bid.score > 90 ? 'text-primary' : 'text-error'}`}>{bid.score}/100</span>
                 </div>
                 <div className="flex flex-col text-right">
@@ -202,3 +202,5 @@ export default function AuditVault() {
     </div>
   );
 }
+
+

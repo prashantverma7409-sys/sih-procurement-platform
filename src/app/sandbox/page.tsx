@@ -83,7 +83,7 @@ export default function Page() {
 </div>
 <div className="flex flex-col px-3 py-1.5 bg-surface-container-low rounded">
 <span className="font-label-sm text-[9px] text-on-surface-variant uppercase tracking-widest leading-none">Seed Entropy</span>
-<span className="font-data-mono text-data-mono text-on-surface mt-1 truncate">0x9f4a...e12d</span>
+<span className="font-data-mono text-data-mono text-on-surface mt-1 truncate">SIM-2026-DEL-109</span>
 </div>
 <div className="flex flex-col px-3 py-1.5 bg-surface-container-low rounded">
 <span className="font-label-sm text-[9px] text-on-surface-variant uppercase tracking-widest leading-none">Throughput</span>
@@ -105,7 +105,7 @@ export default function Page() {
 
 <div className="flex items-center justify-between pb-space-xs border-b border-surface-container-highest">
 <div className="flex items-center gap-2">
-<span className="font-label-sm text-label-sm text-primary font-semibold uppercase tracking-wider">01 // Dataset Configuration</span>
+<span className="font-label-sm text-label-sm text-primary font-semibold uppercase tracking-wider">Dataset Configuration</span>
 </div>
 <span className="font-label-sm text-[9px] px-2 py-0.5 rounded bg-surface-container font-mono text-on-surface-variant">SPEC: MoRTH-v4.2</span>
 </div>
@@ -342,3 +342,4 @@ export default function Page() {
     </>
   );
 }
+

@@ -28,7 +28,7 @@ export default function Page() {
 <span className="text-xs font-mono text-slate-400">DGFT CLEARANCE #PASSPORT-8821-IND</span>
 </div>
 <h1 className="text-2xl lg:text-3xl font-display font-bold text-white tracking-tight">
-              Sovereign Reputation Passport <span className="text-cyan-400 font-normal">// Fast-Track Clearance</span>
+              Sovereign Reputation Passport <span className="text-cyan-400 font-normal">- Fast-Track Clearance</span>
 </h1>
 <p className="mt-2 text-sm text-slate-300 leading-relaxed font-sans">
               Standard 6-month vendor onboarding bypassed. Direct DPIIT-accredited listing authorized under Statutory Rule 149(v). All escrow telemetry and pilot milestones cryptographically sealed.
@@ -54,7 +54,7 @@ export default function Page() {
 <div className="mt-6 pt-6 border-t border-brand-border/80 grid grid-cols-2 md:grid-cols-4 gap-4" data-purpose="quick-metrics-row">
 
 <div className="bg-brand-dark/70 border border-brand-border p-3 rounded-lg">
-<div className="text-[11px] font-mono text-slate-400 uppercase">Sovereign Trust Score</div>
+<div className="text-[11px] font-mono text-slate-400 uppercase">DPIIT Verified Rating</div>
 <div className="mt-1 flex items-baseline space-x-1.5">
 <span className="text-2xl font-display font-bold text-cyan-400">99.4</span>
 <span className="text-xs font-mono text-slate-500">/ 100</span>
@@ -280,7 +280,7 @@ export default function Page() {
                   </div>
 <div>
 <h4 className="font-mono text-xs font-bold text-white">CERT-In-Penetration-Audit-Report.p7b</h4>
-<span className="text-[10px] font-mono text-slate-400">Zero vulnerabilities // DPDP Act 2023 certified</span>
+<span className="text-[10px] font-mono text-slate-400">Zero vulnerabilities - DPDP Act 2023 certified</span>
 </div>
 </div>
 <span className="px-2 py-0.5 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-mono text-[10px] font-bold rounded">
@@ -294,7 +294,7 @@ export default function Page() {
 </div>
 <div className="flex justify-between truncate">
 <span>SHA256:</span>
-<span className="text-cyan-400 font-mono text-[10px]">0x7f02...e491</span>
+<span className="text-cyan-400 font-mono text-[10px]">REF-2024-991A</span>
 </div>
 </div>
 </div>
@@ -318,7 +318,7 @@ export default function Page() {
                   </div>
 <div>
 <h4 className="font-mono text-xs font-bold text-white truncate max-w-[240px]">PFMS-Smart-Tranche-Settlement.json</h4>
-<span className="text-[10px] font-mono text-slate-400">14 Micro-tranches // 0 disputes</span>
+<span className="text-[10px] font-mono text-slate-400">14 Micro-tranches - 0 disputes</span>
 </div>
 </div>
 <span className="px-2 py-0.5 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-mono text-[10px] font-bold rounded">
@@ -332,7 +332,7 @@ export default function Page() {
 </div>
 <div className="flex justify-between truncate">
 <span>SHA256:</span>
-<span className="text-cyan-400 font-mono text-[10px]">0x8a14...b02c</span>
+<span className="text-cyan-400 font-mono text-[10px]">REF-2025-002B</span>
 </div>
 </div>
 </div>
@@ -370,7 +370,7 @@ export default function Page() {
 </div>
 <div className="flex justify-between truncate">
 <span>SHA256:</span>
-<span className="text-cyan-400 font-mono text-[10px]">0x3d92...f819</span>
+<span className="text-cyan-400 font-mono text-[10px]">REF-2025-110C</span>
 </div>
 </div>
 </div>
@@ -408,7 +408,7 @@ export default function Page() {
 </div>
 <div className="flex justify-between truncate">
 <span>SHA256:</span>
-<span className="text-cyan-400 font-mono text-[10px]">0x6e21...c510</span>
+<span className="text-cyan-400 font-mono text-[10px]">REF-2026-880D</span>
 </div>
 </div>
 </div>
@@ -429,3 +429,4 @@ export default function Page() {
     </>
   );
 }
+
