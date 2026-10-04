@@ -4,7 +4,7 @@ import Sidebar from '@/components/Sidebar';
 
 
 export const metadata: Metadata = {
-  title: "GovTech Portal - SIH PS 136",
+  title: "Samarth GovTech Platform - SIH PS 136",
   description: "Startup-friendly public procurement mechanism",
 };
 

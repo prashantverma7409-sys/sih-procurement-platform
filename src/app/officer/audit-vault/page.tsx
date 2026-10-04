@@ -40,7 +40,7 @@ export default function AuditVault() {
 
       const doc = new jsPDF();
       doc.setFontSize(18);
-      doc.text('GovTech - Safe-Harbor Evaluation Report', 14, 20);
+      doc.text('Samarth GovTech - Safe-Harbor Evaluation Report', 14, 20);
       doc.setFontSize(10);
       doc.text('Double-blind bid evaluation record (prototype / demo data)', 14, 27);
       doc.line(14, 30, 196, 30);

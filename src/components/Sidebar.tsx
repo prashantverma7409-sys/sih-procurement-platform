@@ -28,7 +28,7 @@ export default function Sidebar() {
               src="https://lh3.googleusercontent.com/aida/AEtjO1Vb_rkpHeDlxKXn4l0nBIUE4ps4PuvWNYzOdLI0zZsuzcBr11LYodVoKkYIYFXSW10_4d31xv84UbquQ35lAIIGnOop_77MSCttmomi0zbRwlbgAorH70SYjcqK9wPcdwjvKDjEya6zzQzOa_x5VFppNuFPg4J-Q7k2DJ1jnKbTzRTZ8k8LN2udUDzPSpMFD7Z1VuhkKBA0oW5tpkaSZOEIKBIEZhQNI8ptLzyy6ioqj1bZgL65YeoY-w"
             />
             <div className="flex flex-col">
-              <span className="text-base font-bold text-slate-900 leading-none">GovTech Open Procurement Portal</span>
+              <span className="text-base font-bold text-slate-900 leading-none">Samarth GovTech Platform</span>
               <span className="text-xs text-primary font-semibold tracking-wide uppercase mt-1">National Procurement Hub</span>
             </div>
           </div>
