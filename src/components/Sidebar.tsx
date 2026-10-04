@@ -7,14 +7,14 @@ export default function Sidebar() {
   const pathname = usePathname();
 
   const navLinks = [
-    { href: '/', icon: 'grid_view', label: 'Tender Dashboard' },
     { href: '/officer/post-tender', icon: 'rule', label: 'AI Tender Sanitizer' },
-    { href: '/officer/audit-vault', icon: 'gavel', label: 'Double-Blind Evaluation' },
-    { href: '/architecture-canvas', icon: 'account_tree', label: 'Technical Architecture' },
+    { href: '/', icon: 'grid_view', label: 'Tender Dashboard' },
     { href: '/squads', icon: 'group_work', label: 'Startup Consortium' },
+    { href: '/architecture-canvas', icon: 'account_tree', label: 'Technical Architecture' },
+    { href: '/sandbox', icon: 'biotech', label: 'Synthetic Sandbox' },
+    { href: '/officer/audit-vault', icon: 'gavel', label: 'Double-Blind Evaluation' },
     { href: '/escrow', icon: 'account_balance', label: 'Escrow Payments' },
     { href: '/reputation-passport', icon: 'badge', label: 'Reputation Passport' },
-    { href: '/sandbox', icon: 'biotech', label: 'Synthetic Sandbox' },
   ];
 
   return (
