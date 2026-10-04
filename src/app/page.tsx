@@ -219,7 +219,7 @@ export default function Page() {
           <span className={`material-symbols-outlined text-${tender.themeColor} text-[18px] shrink-0 mt-0.5`}>{tender.icon}</span>
           <div className="flex flex-col">
             <span className={`font-label-sm text-label-sm text-${tender.themeColor} font-semibold uppercase tracking-wider`}>{tender.aiSanitizerTitle}</span>
-            <p className="font-body-sm text-body-sm text-on-surface-variant">
+            <p className="font-body-sm text-body-sm text-slate-700 font-medium">
               {tender.aiSanitizerDesc}
             </p>
           </div>
@@ -229,7 +229,7 @@ export default function Page() {
           <div className="bg-surface-container-low p-space-xs rounded flex flex-col">
             <span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Sanctioned Budget</span>
             <span className="font-headline-sm text-headline-sm text-secondary font-bold">{tender.escrowQuantum}</span>
-            <span className="font-label-sm text-label-sm text-on-surface-variant">{tender.escrowSubtext}</span>
+            <span className="font-label-sm text-label-sm text-slate-700 font-medium">{tender.escrowSubtext}</span>
           </div>
           <div className="bg-surface-container-low p-space-xs rounded flex flex-col">
             <span className="font-label-sm text-label-sm text-on-surface-variant uppercase">{tender.sprintVelocityLabel}</span>
@@ -242,7 +242,7 @@ export default function Page() {
               <span className="material-symbols-outlined text-[14px]">verified</span>
               {tender.securityDepStatus}
             </span>
-            <span className="font-label-sm text-label-sm text-on-surface-variant">{tender.securityDepSubtext}</span>
+            <span className="font-label-sm text-label-sm text-slate-700 font-medium">{tender.securityDepSubtext}</span>
           </div>
         </div>
 
@@ -465,5 +465,7 @@ export default function Page() {
     </>
   );
 }
+
+
 
 
